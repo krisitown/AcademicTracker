@@ -1,0 +1,10 @@
+<h2>Add a subject:</h2>
+<%= form_for @subject do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %> </br>
+    
+    <%= f.hidden_field :user_id, value: session[:current_user] %>
+    
+    <%= f.submit 'Submit' %>
+    
+<% end %>

@@ -1,0 +1,9 @@
+<div class="user-creation-form">
+<h2>Create a user:</h2>
+<%= form_for @User do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %></br>
+    
+    <%= f.submit 'Submit'%>
+<% end %>
+</div>

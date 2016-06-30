@@ -1,0 +1,15 @@
+<div class="user-show">
+    <h2><%= @User.name %></h2>
+    <table>
+        <% @User.subjects.each do |subject| %>
+            <tr>
+                <td class="subject"><%=subject.name%></td>
+                <% subject.grades.each do |grade| %>
+                    <td><%= grade.value %></td>
+                    <% end %>
+                 <% end %>
+            </tr>    
+    </table>
+    
+    <%= link_to 'Add a subject', request.base_url + '/users/' + params[:id] + '/add_subject' %>
+</div>
